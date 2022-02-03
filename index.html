@@ -1,0 +1,856 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container">
+        <div>
+            <div>
+                <h1>Elemento raiz</h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Elemento</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;html&gt;</code></td>
+                            <td>Representa la raíz de un documento HTML o XHTML y le indica al navegador que lo que
+                                viene a
+                                continuación debe ser interpretado como código HTML</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Metadatos del documento</h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Elemento</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;head&gt;</code></td>
+                            <td>Cabecera del documento HTML. Representa una colección de metadatos acerca del documento,
+                                incluyendo enlaces y definiciones de scripts y hojas de estilo.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;title&gt;</code></td>
+                            <td>Define el título del documento, que se muestra en la barra de título del navegador o en
+                                las
+                                pestañas de página. Solamente puede contener texto y cualquier otra etiqueta contenida
+                                no
+                                será interpretada.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;base&gt;</code></td>
+                            <td>Define la URL base para las URLs relativas en la página.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;link&gt;</code></td>
+                            <td>Usada para enlazar JavaScript y CSS externos con el documento HTML actual.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;meta&gt;</code></td>
+                            <td>Define los metadatos que no pueden ser definidos usando otro elemento HTML.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;style&gt;</code></td>
+                            <td>Etiqueta de estilo usada para escribir CSS en línea.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Scripting</h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Elemento</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;script&gt;</code></td>
+                            <td>Define ya sea un script interno o un enlace hacia un script externo. El lenguaje de
+                                programación es JavaScript</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;noscript&gt;</code></td>
+                            <td>Define un contenido alternativo a mostrar cuando el navegador no soporta scripting.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Secciones </h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Elemento</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;body&gt;</code></td>
+                            <td>Incluye el contenido principal de un documento HTML. Solo hay un elemento &lt;body&gt;
+                                en un
+                                documento.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;section&gt;</code></td>
+                            <td>Define una sección en un documento.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;nav&gt;</code></td>
+                            <td>Define una sección que solamente contiene enlaces de navegación</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;article&gt;</code></td>
+                            <td>Define contenido autónomo que podría existir independientemente del resto del contenido.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;aside&gt;</code></td>
+                            <td>Define algunos contenidos vagamente relacionados con el resto del contenido de la
+                                página. Si
+                                es removido, el contenido restante seguirá teniendo sentido</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;h1&gt;,&lt;h2&gt;,&lt;h3&gt;,&lt;h4&gt;,</code><code>&lt;h5&gt;,&lt;h6&gt;</code>
+                            </td>
+                            <td>Los elemento de cabecera implementan seis niveles de cabeceras de documentos;
+                                <code>&lt;h1&gt;</code> es la de mayor y <code>&lt;h6&gt;</code> es la de menor
+                                impotancia.
+                                Un elemento de cabecera describe brevemente el tema de la sección que introduce.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;header&gt;</code></td>
+                            <td>Define la cabecera de una página o sección. Usualmente contiene un logotipo, el título
+                                del
+                                sitio Web y una tabla de navegación de contenidos.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;footer&gt;</code></td>
+                            <td>Define el pie de una página o sección. Usualmente contiene un mensaje de derechos de
+                                autoría, algunos enlaces a información legal o direcciones para dar información de
+                                retroalimentación.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;address&gt;</code></td>
+                            <td>Define una sección que contiene información de contacto.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;main&gt;</code></td>
+                            <td>Define el contenido principal o importante en el documento. Solamente existe un elemento
+                                <code>&lt;main&gt;</code> en el documento.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Agrupación de contenido</h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Elemento</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;p&gt;</code></td>
+                            <td>Define una parte que debe mostrarse como un párrafo.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;hr&gt;</code></td>
+                            <td>Introduce una separción entre parrafos de una sección o articulo o cualquier contenido.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;pre&gt;</code></td>
+                            <td>Indica que su contenido esta preformateado y que este formato debe ser preservado.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;blockquote&gt;</code></td>
+                            <td>Incluye un contenido citado desde otra fuente.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;ol&gt;</code></td>
+                            <td>Define una lista ordenada de artículos.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;ul&gt;</code></td>
+                            <td>Define una lista de artículos sin orden.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;li&gt;</code></td>
+                            <td>Define un artículo de una lista ennumerada.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;dl&gt;</code></td>
+                            <td>Define una lista de definiciones, es decir, una lista de términos y sus definiciones
+                                asociadas.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;dt&gt;</code></td>
+                            <td>Representa un término definido por el siguiente <code>&lt;dd&gt;</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;dd&gt;</code></td>
+                            <td>Representa la definición de los terminos listados antes que él.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;figure&gt;</code></td>
+                            <td>Representa una figura ilustrada como parte del documento.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;figcaption&gt;</code></td>
+                            <td>Representa la leyenda de una figura.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;div&gt;</code></td>
+                            <td>Incluye un contenedor genérico sin ningún significado especial.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Semantica a nivel de text</h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Elemento</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;a&gt;</code></td>
+                            <td>Incluye un <em>hiperenlace</em>, enlazando a otro recurso.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;em&gt;</code></td>
+                            <td>Incluye un texto <em>enfatizado</em>, como un acento de intensidad.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;strong&gt;</code></td>
+                            <td>Incluye un texto especialmente <em>importante</em> .</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;small&gt;</code></td>
+                            <td>Incluye un <em>comentario aparte</em>, es decir, textos como un descargo de
+                                responsabilidad
+                                o una nota de derechos de autoría.<code> </code></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;s&gt;</code></td>
+                            <td>Incluye contenido que <em>ya</em> <em>no es exacto o relevante</em> .</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;cite&gt;</code></td>
+                            <td>Incluye el <em>título de una obra</em> .</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;q&gt;</code></td>
+                            <td>Incluye una <em>cita textual</em> inline.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;dfn&gt;</code></td>
+                            <td>Incluye un término cuya <em>definición</em> está contenida en su ancestro más próximo.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;abbr&gt;</code></td>
+                            <td>Representa una <em>abreviación </em> o un <em>acrónimo</em> ; la expansión de la
+                                abreviatura
+                                puede ser representada por el atributo <code>title</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;data&gt;</code></td>
+                            <td>Asocia un <em>equivalente legible por máquina </em>a sus contenidos</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;time&gt;</code></td>
+                            <td>Incluye un valor de <em>fecha </em>y <em>hora</em>; el equivalente legible por máquina
+                                puede
+                                ser representado en el atributo <span
+                                    style="font-family: courier new,andale mono,monospace; line-height: normal;">datetime</span>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;code&gt;</code></td>
+                            <td>Incluye un <em>código de </em><em>ordenador</em> .</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;var&gt;</code></td>
+                            <td>Incluye a una <em>variable</em><em></em></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;samp&gt;</code></td>
+                            <td>Representa la <em>salida</em> de un programa o un ordenador.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;kbd&gt;</code></td>
+                            <td>Representa la <em>entrada de usuario</em>, por lo general desde un teclado, pero no
+                                necesariamente</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;sub&gt;</code>,<code>&lt;sup&gt;</code></td>
+                            <td>Representan un <em>subíndice</em> y un <em>superíndice, </em>respectivamente.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;i&gt;</code></td>
+                            <td>Representa un texto en una voz o estado de ánimo <em>alterno</em>, o por lo menos de
+                                diferente calidad</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;b&gt;</code></td>
+                            <td>Incluye un texto hacia el cual se llama la atención para <em>propósitos utilitaros</em>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;u&gt;</code></td>
+                            <td>Representa una anotación no textual <em>sin-articular</em>, como etiquetar un texto como
+                                mal
+                                escrito o etiquetar un nombre propio en texto en Chino.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;mark&gt;</code></td>
+                            <td>Representa texto resaltado con propósitos de <em>referencia</em>, es decir por su
+                                relevancia
+                                en otro contexto.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;ruby&gt;</code></td>
+                            <td>Representa contenidos a ser marcados con <em>anotaciones ruby</em>, recorridos cortos de
+                                texto presentados junto al texto.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;rt&gt;</code></td>
+                            <td>Representa el <em>texto de una anotación ruby</em> .</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;rp&gt;</code></td>
+                            <td>Representa los <em>paréntesis </em>alrededor de una anotación ruby, usada para mostrar
+                                la
+                                anotación de manera alterna por los navegadores que no soporten despliegue estandar para
+                                las
+                                anotaciones.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;bdi&gt;</code></td>
+                            <td>Representa un texto que debe ser <em>aislado</em> de sus alrededores para el formateado
+                                bidireccional del texto. Permite incrustar un fragmento de texto con una direccionalidad
+                                diferente o desconocida.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;bdo&gt;</code></td>
+                            <td>Representa la <em>direccionalidad</em> de sus descendientes con el fin de anular de
+                                forma
+                                explícita al algoritmo bidireccional Unicode.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;span&gt;</code></td>
+                            <td>Representa texto sin un significado específico. Este debe ser usado cuando <em>ningún
+                                    otro</em> elemento semántico le confiere un significado adecuado, en cuyo caso,
+                                provendrá de atributos globales como <code>class</code>, <code>lang</code>, o
+                                <code>dir</code>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;br&gt;</code></td>
+                            <td>Representa un <em>salto de línea</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;wbr&gt;</code></td>
+                            <td>Representa una <em>oportunidad de salto de línea, </em>es decir, un punto sugerido de
+                                envoltura donde el texto de múltiples líneas puede ser dividido para mejorar su
+                                legibilidad.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Edicion</h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Elemento</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;ins&gt;</code></td>
+                            <td>Define una <em>adición</em> en el documento.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;del&gt;</code></td>
+                            <td>Define una <em>remoción</em> del documento.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Contenido incrustad</h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Elemento</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;img&gt;</code></td>
+                            <td>Representa una <em>imagen</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;iframe&gt;</code></td>
+                            <td>Representa un <em>contexto anidado de navegación</em>, es decir, un documento HTML
+                                embebido.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;embed&gt;</code></td>
+                            <td>Representa un <em>punto de integración</em> para una aplicación o contenido interactivo
+                                externo que por lo general no es HTML.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;object&gt;</code></td>
+                            <td>Representa un <em>recurso externo, </em>que será tratado como una imagen, un
+                                sub-documento
+                                HTML o un recurso externo a ser procesado por un plugin.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;param&gt;</code></td>
+                            <td>Define <em>parámetros</em> para el uso por los plugins invocados por los elementos
+                                <code>&lt;object&gt;</code>.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;video&gt;</code></td>
+                            <td>Representa un <em>video</em>, y sus archivos de audio y capciones asociadas, con la
+                                interfaz
+                                necesaria para reproducirlos.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;audio&gt;</code></td>
+                            <td>Representa un <em>sonido</em> o <em>stream de audio.</em></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;source&gt;</code></td>
+                            <td>Permite a autores especificar recursos multimedia alternativos para los elementos
+                                multimedia
+                                como <code>&lt;video&gt;</code> o <code>&lt;audio&gt;</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;track&gt;</code></td>
+                            <td>Permite a autores especificar una <em>pista de texto</em> temporizado para elementos
+                                multimedia como <code>&lt;video&gt; </code>o<em> <code>&lt;audio&gt;</code>.</em></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;canvas&gt;</code></td>
+                            <td>Representa un <em>área de mapa de bits</em> en el que se pueden utilizar scripts para
+                                renderizar gráficos como gráficas, gráficas de juegos o cualquier imagen visual al
+                                vuelo.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;map&gt;</code></td>
+                            <td>En conjunto con <code>&lt;area&gt;</code>, define un <em>mapa de imagen</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;area&gt;</code></td>
+                            <td>En conjunto con <code>&lt;map&gt;</code>, define un <em>mapa de imagen</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;svg&gt;</code></td>
+                            <td>Define una <em>imagen vectorial</em> embebida.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;math&gt;</code></td>
+                            <td>Define una <em>fórmula matemática</em>.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Tabla</h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Elemento</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;table&gt;</code></td>
+                            <td><em>Incluye datos con más de una dimensión.</em></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;caption&gt;</code></td>
+                            <td>Incluye el <em>título de una tabla</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;colgroup&gt;</code></td>
+                            <td>Incluye un <em>conjunto de una o más columnas</em> de una tabla.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;col&gt;</code></td>
+                            <td>Incluye una <em>columna </em>de una tabla.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;tbody&gt;</code></td>
+                            <td>Incluye el bloque de filas que describen los <em>datos contretos</em> de una tabla.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;thead&gt;</code></td>
+                            <td>Incluye el bloque de filas que describen las <em>etiquetas de columna</em> de una tabla.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;tfoot&gt;</code></td>
+                            <td>Incluye los bloques de filas que describen los <em>resúmenes de columna </em>de una
+                                tabla.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;tr&gt;</code></td>
+                            <td>Incluye una <em>fila de celdas </em>en una tabla.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;td&gt;</code></td>
+                            <td>Incluye una <em>celda de datos</em> en una tabla.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;th&gt;</code></td>
+                            <td>Incluye una <em>celda encabezado </em>en una tabla.</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Formulario</h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Elemento</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;form&gt;</code></td>
+                            <td>Incluye un <em>formulario</em>, consistendo de controles que puede ser enviado a un
+                                servidor
+                                para procesamiento.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;fieldset&gt;</code></td>
+                            <td>Incluye un <em>conjunto de controles</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;legend&gt;</code></td>
+                            <td>Incluye el <em>título </em>de un <code>&lt;fieldset&gt;</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;label&gt;</code></td>
+                            <td>Incluye el <em>título</em> de un control de formulario.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;input&gt;</code></td>
+                            <td>Incluye un <em>campo de datos escrito </em>que permite al usuario editar los datos.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;button&gt;</code></td>
+                            <td>Incluye un <em>botón</em></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;select&gt;</code></td>
+                            <td>Incluye un control que permite la <em>selección entre un conjunto de opciones</em>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;datalist&gt;</code></td>
+                            <td>Incluye un <em>conjunto de opciones predefiniddas </em>para otros controles.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;optgroup&gt;</code></td>
+                            <td>Incluye un <em>conjunto de opciones, </em>agrupadas lógicamente.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;option&gt;</code></td>
+                            <td>Incluye una <em>opción</em> en un elemento <code>&lt;select&gt;</code>, o una sugerencia
+                                de
+                                un elemento <code>&lt;datalist&gt;</code>.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;textarea&gt;</code></td>
+                            <td>Incluye un <em>control de edición de texto multi-línea.</em></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;keygen&gt;</code></td>
+                            <td>Incluye un control de <em>par generador de llaves.</em></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;output&gt;</code></td>
+                            <td>Incluye el <em>resultado de un cálculo.</em></td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;progress&gt;</code></td>
+                            <td>Incluye el <em>progreso de finalización </em>de una tarea.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;meter&gt;</code></td>
+                            <td>Incluye la <em>medida </em>escalar (o el valor fraccionario) dentro de un rango
+                                conocido.
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Elementos interactivo</h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th scope="col">Elemento</th>
+                            <th scope="col">Descripción</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><code>&lt;details&gt;</code></td>
+                            <td>Incluye un <em>widget</em> desde el que un usuario puede obtener información o controles
+                                adicionales.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;summary&gt;</code></td>
+                            <td>Incluye un <em>resumen, título</em> o <em>leyenda</em> para un elemento
+                                <code>&lt;details&gt; </code>dado.
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;command&gt;</code></td>
+                            <td>Incluye un <em>comando</em> que un usuario puede invocar.</td>
+                        </tr>
+                        <tr>
+                            <td><code>&lt;menu&gt;</code></td>
+                            <td>Incluye una <em>lista de comandos</em> .</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <div>
+            <div>
+                <h1>Atributos de eventos</h1>
+            </div>
+            <div>
+                <table class="table table-striped table-hover">
+                    <thead>
+                        <tr>
+                            <th>Atributo</th>
+                            <th>Descripción</th>
+                            <th>Elementos que pueden usarlo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>onblur</td>
+                            <td>Deseleccionar el elemento</td>
+                            <td>&lt;button&gt;,&nbsp;&lt;input&gt;,&nbsp;&lt;label&gt;,&nbsp;&lt;select&gt;,&nbsp;&lt;textarea&gt;,&nbsp;&lt;body&gt;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>onchange</td>
+                            <td>Deseleccionar un elemento que se ha modificado</td>
+                            <td>&lt;input&gt;,&nbsp;&lt;select&gt;,&nbsp;&lt;textarea&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>onclick</td>
+                            <td>Pinchar y soltar el ratón</td>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <td>ondblclick</td>
+                            <td>Pinchar dos veces seguidas con el ratón</td>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <td>onfocus</td>
+                            <td>Seleccionar un elemento</td>
+                            <td>&lt;button&gt;,&nbsp;&lt;input&gt;,&nbsp;&lt;label&gt;,&nbsp;&lt;select&gt;,&nbsp;&lt;textarea&gt;,&nbsp;&lt;body&gt;
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>onkeydown</td>
+                            <td>Pulsar una tecla (sin soltar)</td>
+                            <td>Elementos de formulario y&nbsp;&lt;body&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>onkeypress</td>
+                            <td>Pulsar una tecla</td>
+                            <td>Elementos de formulario y&nbsp;&lt;body&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>onkeyup</td>
+                            <td>Soltar una tecla pulsada</td>
+                            <td>Elementos de formulario y&nbsp;&lt;body&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>onload</td>
+                            <td>La página se ha cargado completamente</td>
+                            <td>&lt;body&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>onmousedown</td>
+                            <td>Pulsar (sin soltar) un botón del ratón</td>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <td>onmousemove</td>
+                            <td>Mover el ratón</td>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <td>onmouseout</td>
+                            <td>El ratón&nbsp;"sale"&nbsp;del elemento (pasa por encima de otro elemento)</td>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <td>onmouseover</td>
+                            <td>El ratón&nbsp;"entra"&nbsp;en el elemento (pasa por encima del elemento)</td>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <td>onmouseup</td>
+                            <td>Soltar el botón que estaba pulsado en el ratón</td>
+                            <td>Todos los elementos</td>
+                        </tr>
+                        <tr>
+                            <td>onreset</td>
+                            <td>Inicializar el formulario (borrar todos sus datos)</td>
+                            <td>&lt;form&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>onresize</td>
+                            <td>Se ha modificado el tamaño de la ventana del navegador</td>
+                            <td>&lt;body&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>onselect</td>
+                            <td>Seleccionar un texto</td>
+                            <td>&lt;input&gt;,&nbsp;&lt;textarea&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>onsubmit</td>
+                            <td>Enviar el formulario</td>
+                            <td>&lt;form&gt;</td>
+                        </tr>
+                        <tr>
+                            <td>onunload</td>
+                            <td>Se abandona la página (por ejemplo al cerrar el navegador)</td>
+                            <td>&lt;body&gt;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <div>
+                <div>
+                    <h1>Atributos de foco</h1>
+                </div>
+                <div>
+                    <table class="table table-striped table-hover">
+                        <thead>
+                            <tr>
+                                <th>Atributo</th>
+                                <th>Descripción</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>accesskey = "letra"</td>
+                                <td>Establece una tecla de acceso rápido a un elemento HTML</td>
+                            </tr>
+                            <tr>
+                                <td>tabindex = "numero"</td>
+                                <td>Establece la posición del elemento en el orden de tabulación de la página. Su valor
+                                    debe estar comprendido entre&nbsp;0&nbsp;y&nbsp;32.767</td>
+                            </tr>
+                            <tr>
+                                <td>onfocus, onblur</td>
+                                <td>Controlan los eventos JavaScript que se ejecutan cuando el elemento obtiene o pierde
+                                    el foco</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
