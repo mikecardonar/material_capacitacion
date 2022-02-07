@@ -1,6 +1,7 @@
-import { NgModule, CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
+import { LayoutRoutingModule } from './layout-routing.module';
 import { ContentComponent } from './content/content.component';
 
 
@@ -10,7 +11,7 @@ import { ContentComponent } from './content/content.component';
   ],
   imports: [
     CommonModule,
-  ],
-  schemas: [ CUSTOM_ELEMENTS_SCHEMA ]
+    LayoutRoutingModule
+  ]
 })
 export class LayoutModule { }
