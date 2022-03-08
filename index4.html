@@ -123,7 +123,7 @@
         }
 
         .presentacion__titulo {
-            font-size: 40px;
+            font-size: 3rem;
         }
 
         .presentacion__parrafo {
@@ -158,7 +158,7 @@
         }
 
         .texto-looking__parrafo {
-            font-size: 14px;
+            font-size: 1rem;
             margin: 15px auto 25px;
             max-width: 600px;
         }
@@ -170,7 +170,91 @@
             margin: auto;
             width: 65px;
             border-bottom: 1px solid #cfcfcf;
-            box-shadow: 0px 0px 0px 70px #000000;
+            box-shadow: 0px 0px 2px 1px #cfcfcf;
+        }
+
+        .navegacion-mobile {
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 15px;
+        }
+
+        .navegacion-mobile__burger-menu img {
+            width: 30px;
+        }
+
+        .navegacion-mobile__logo img {
+            width: 230px;
+        }
+
+        .navegacion-mobile__opciones svg {
+            width: 30px;
+        }
+
+        .hide {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        .navegacion-mobile__menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fffffffa;
+            opacity: 0;
+            transition: all ease .5s;
+            visibility: hidden;
+        }
+
+        .navegacion-mobile__menu__lista {
+            margin: auto;
+            text-align: center;
+        }
+
+        .navegacion-mobile__menu__lista li {
+            margin-bottom: 20px;
+        }
+
+        .navegacion-mobile__menu__close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #chk-menu:checked ~ .navegacion-mobile__menu {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .navegacion-mobile {
+                display: flex;
+            }
+
+            .navegacion {
+                display: none;
+            }
+
+            html {
+                font-size: 82.5%;
+            }
+
+        }
+
+        @media screen and (max-width: 992px) {
+            .marcas {
+                flex-direction: column;
+            }
+
+            .marcas img {
+                width: 90%;
+                margin: 20px auto;
+                max-width: 200px;
+            }
+
         }
     </style>
 </head>
@@ -179,7 +263,7 @@
     
     <!-- barra negra -->
     <div class="barra_negra"></div>
-    <!-- menu de navegacion -->
+    <!-- menu de navegacion escritorio -->
     <nav class="navegacion">
         <div class="navegacion__logo">
             <img src="images/logo_header.png" alt="logo">
@@ -224,6 +308,66 @@
             </a>
         </div>
     </nav>
+
+    <!-- menu de navegacion mobile -->
+    <nav class="navegacion-mobile">
+        <input type="checkbox" id="chk-menu" class="hide" />
+        <label for="chk-menu" class="navegacion-mobile__burger-menu">
+            <img src="images/menu.png" />
+        </label>
+        <div class="navegacion-mobile__logo">
+            <img src="images/logo_header.png" alt="logo">
+        </div>
+            
+        <div class="navegacion-mobile__opciones">
+            <!-- icon user -->
+            <a href="#" >
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <g id="avatar">
+                            <path
+                                d="M97,50A47,47,0,1,0,17.28,83.74l0,0h0A46.93,46.93,0,0,0,82.39,84a2,2,0,0,0,.5-.47A46.88,46.88,0,0,0,97,50ZM50,7A43,43,0,0,1,81.88,78.82a35.54,35.54,0,0,0-22-18.17,20.28,20.28,0,1,0-19.8,0,35.52,35.52,0,0,0-22,18.18A42.59,42.59,0,0,1,7,50,43,43,0,0,1,50,7Zm0,52.25A16.28,16.28,0,1,1,66.28,43,16.29,16.29,0,0,1,50,59.25ZM21.12,81.84a31.73,31.73,0,0,1,57.76,0,42.93,42.93,0,0,1-57.76,0Z">
+                            </path>
+                        </g>
+                    </svg>
+                </span>
+            </a>
+            <!-- icon shopping car -->
+            <a href="#">
+                <span>
+                    <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <g id="cart">
+                            <path
+                                d="M47.55,73.94a8,8,0,1,0,8,8A8,8,0,0,0,47.55,73.94Zm0,12a4,4,0,1,1,4-4A4,4,0,0,1,47.55,85.91Z">
+                            </path>
+                            <path
+                                d="M76.82,73.94a8,8,0,1,0,8,8A8,8,0,0,0,76.82,73.94Zm0,12a4,4,0,1,1,4-4A4,4,0,0,1,76.82,85.91Z">
+                            </path>
+                            <path
+                                d="M88.75,61.75l8.09-36.12a6.46,6.46,0,0,0-6.3-7.87H27.47l-1.24-6.07a2,2,0,0,0-2-1.6H5a2,2,0,0,0,0,4H22.64l1.24,6.07h0l8.5,41.55h0L34.29,71a2,2,0,0,0,2,1.6H92.12a2,2,0,0,0,0-4H37.88l-1.09-5.31h50A2,2,0,0,0,88.75,61.75ZM36,59.31,28.29,21.76H90.54a2.45,2.45,0,0,1,2.4,3L85.19,59.31Z">
+                            </path>
+                        </g>
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        <div class="navegacion-mobile__menu menu">
+            <ul class=" navegacion-mobile__menu__lista">
+                <li class="menu__item">ELECTRIC SKATEBOARDS</li>
+                <li class="menu__item">ELECTRIC SCOOTERS</li>
+                <li class="menu__item">ACCESORIES</li>
+                <li class="menu__item">GIF CARD</li>
+                <li class="menu__item">MORE INFO</li>
+            </ul>
+            <label class="navegacion-mobile__menu__close" for="chk-menu">
+                <img width="20px" src="images/close.png" alt="">
+            </label>
+        </div>
+        
+    </nav>
+    
+
     <!-- header -->
     <!-- <header class="presentacion">
         <img class="presentacion__imagen" src="images/header.jpg" alt="header">
