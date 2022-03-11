@@ -1,0 +1,139 @@
+// interpolacion
+
+{{ $variable }}
+`${$varible}`
+
+#{$varible}
+
+// variables
+
+$bg-color-primary: #000;
+
+$bg-color-primary
+
+
+// imports
+
+
+@import 'hoja1' -> @import 'variables'
+
+$bg-color-primary
+
+@use 'hoja1' as * -> @use 'variables' as *
+
+$bg-color-primary -> error 
+
+
+// extends
+
+.clase {
+    backgroud: #000;
+    color: #fff;
+    font-size: 13px
+}
+
+.clase .ancor {
+    color: red;
+    font-family: 'Arial';
+}
+
+.boton {
+    @extend .clase .ancor
+    border: 1px solid #F1F1F1
+}
+
+
+// Mixins
+
+
+@mixin color-button($propiedad, $valor) {
+    #{$propiedad}: $valor;
+    margin: 2px;
+    background: #000;
+    border: 1px solid red;
+}
+
+.button {
+    @include color-button($propiedad: 'padding', $valor: 5px 15px);
+    font-size: 13px;
+}
+
+
+// funciones
+
+@function suma($valor1, $valor2) {
+    $response: $valor1 + $valor2;
+    @return $response;
+}
+
+.content {
+    width: suma(4, 5) * 1vw;
+}
+
+
+// condiciones
+
+@mixin name($border: false, $size) {
+    width: 100%;
+    height: 100vh;
+
+    @if $border {
+        border: $size solid #f1f1f1;
+    } @else {
+        border: 1px solid #f1f1f1;
+    }
+}
+
+
+// loops
+
+
+/* each */
+$variable: 40, 50, 60;
+
+@each $item in $variable {
+    .margin-#{$item} {
+        margin: $item * 1px;
+    }
+}
+
+.margin-40 {
+    margin: 40px;
+}
+.margin-50 {
+    margin: 50px;
+}
+.margin-60 {
+    margin: 60px;
+}
+
+/* for */
+
+@for $item from 1 to 100 {
+    .w-#{$item} {
+        width: $item * 1%;
+    }
+}
+
+.w-1{
+    width: 1%;
+}
+
+.w-77 {
+    width: 77%;
+}
+
+/* while */
+
+@function funcion1($value, $base, $ratio: 1.6){
+    @while $value > $base {
+        $value: math.div($valor, $ratio)
+    }
+    @return $value;
+}
+
+$size: 10px;
+
+.clase {
+    font-size: funcion1(20px, 16px);
+}
