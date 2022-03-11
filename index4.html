@@ -9,29 +9,277 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            font-family: Arial;
+        }
 
+        .flex {
+            display: flex;
+        }
+
+        .justify-space-between {
+            justify-content: space-between;
+        }
+        
+        .justify-space-evenly {
+            justify-content: space-evenly;
+        }
+
+        .p-1 {
+            padding: 10px;
+        }
+
+        .p-2 {
+            padding: 20px;
+        }
+
+        .px-1 {
+            padding: 0 10px;
+        }
+
+        .py-1 {
+            padding: 10px 0;
+        }
+
+        .py-2 {
+            padding: 20px 0;
+        }
+
+        .pt-1 {
+            padding-top: 10px;
+        }
+
+        .barra_negra {
+            width: 100%;
+            border-bottom: 10px solid #000000;
+        }
+
+        .navegacion{
+            padding: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        .navegacion__logo {
+            flex-grow: 1;
+        }
+
+        .navegacion__logo img {
+            width: 200px;
+        }
+
+        .navegacion__opciones a {
+            width: 20px;
+            display: inline-block;
+        }
+
+        .navegacion__opciones svg {
+            width: 100%;
+        }
+
+        .menu {
+            display: flex;
+            flex-grow: 2;
+        }
+
+        .menu__item {
+            font-family: Arial, Helvetica, sans-serif;
+            padding: 14px 8px;
+            list-style: none;
+            color: #444444;
+            border-bottom: 5px solid transparent;
+            cursor: pointer;
+        }
+
+        .menu__item:hover {
+            color: #000000;
+            border-bottom: 5px solid #000000;
+        }
+
+        .presentacion {
+            width: 100%;
+            background-image: url("images/header.jpg");
+            padding: 50px 0 50vh;
+            background-size: cover;
+            background-position: center;
+        }
+        
+        .presentacion__imagen {
+            width: 100%;
+        }
+
+        .presentacion__informacion {
+            width: 100%;
+            top: 60px;
+            text-align: center;
+        }
+
+        .presentacion__botones {
+            margin-top: 20px;
+        }
+
+        .presentacion__titulo {
+            font-size: 3rem;
+        }
+
+        .presentacion__parrafo {
+            font-weight: bold;
+            margin: 20px;
+        }
+
+        /* boton */
+
+        .boton {
+            background-color: #ff4a32;
+            padding: 8px 30px;
+            margin: 5px;
+            color: #fff;
+            text-decoration: none;
+        }
+
+        .boton--redondo {
+            border-radius: 20px;
+        }
+
+        
+        /* marcas */
+        .marcas {
+            background-color: #000000;
+        }
+
+        /* texto-looking */
+        .texto-looking {
+            text-align: center;
+            padding: 55px 0 40px;
+        }
+
+        .texto-looking__parrafo {
+            font-size: 1rem;
+            margin: 15px auto 25px;
+            max-width: 600px;
+        }
+
+
+        /* separador */
+
+        .separador {
+            margin: auto;
+            width: 65px;
+            border-bottom: 1px solid #cfcfcf;
+            box-shadow: 0px 0px 2px 1px #cfcfcf;
+        }
+
+        .navegacion-mobile {
+            display: none;
+            justify-content: space-between;
+            align-items: center;
+            padding: 5px 15px;
+        }
+
+        .navegacion-mobile__burger-menu img {
+            width: 30px;
+        }
+
+        .navegacion-mobile__logo img {
+            width: 230px;
+        }
+
+        .navegacion-mobile__opciones svg {
+            width: 30px;
+        }
+
+        .hide {
+            visibility: hidden;
+            position: absolute;
+        }
+
+        .navegacion-mobile__menu {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: #fffffffa;
+            opacity: 0;
+            transition: all ease .5s;
+            visibility: hidden;
+        }
+
+        .navegacion-mobile__menu__lista {
+            margin: auto;
+            text-align: center;
+        }
+
+        .navegacion-mobile__menu__lista li {
+            margin-bottom: 20px;
+        }
+
+        .navegacion-mobile__menu__close {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+        }
+
+        #chk-menu:checked ~ .navegacion-mobile__menu {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        @media screen and (max-width: 1100px) {
+            .navegacion-mobile {
+                display: flex;
+            }
+
+            .navegacion {
+                display: none;
+            }
+
+            html {
+                font-size: 82.5%;
+            }
+
+        }
+
+        @media screen and (max-width: 992px) {
+            .marcas {
+                flex-direction: column;
+            }
+
+            .marcas img {
+                width: 90%;
+                margin: 20px auto;
+                max-width: 200px;
+            }
+
+        }
+    </style>
 </head>
 
 <body>
+    
     <!-- barra negra -->
-    <div></div>
-    <!-- menu de navegacion -->
-    <nav>
-        <div>
+    <div class="barra_negra"></div>
+    <!-- menu de navegacion escritorio -->
+    <nav class="navegacion">
+        <div class="navegacion__logo">
             <img src="images/logo_header.png" alt="logo">
         </div>
-        <ul>
-            <li>ELECTRIC SKATEBOARDS</li>
-            <li>ELECTRIC SCOOTERS</li>
-            <li>ACCESORIES</li>
-            <li>GIF CARD</li>
-            <li>MORE INFO</li>
+        <ul class="navegacion__menu menu">
+            <li class="menu__item">ELECTRIC SKATEBOARDS</li>
+            <li class="menu__item">ELECTRIC SCOOTERS</li>
+            <li class="menu__item">ACCESORIES</li>
+            <li class="menu__item">GIF CARD</li>
+            <li class="menu__item">MORE INFO</li>
         </ul>
-        <div>
+        <div class="navegacion__opciones">
             <!-- icon user -->
             <a href="#" >
                 <span>
-                    <svg style="width: 10%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                         <g id="avatar">
                             <path
                                 d="M97,50A47,47,0,1,0,17.28,83.74l0,0h0A46.93,46.93,0,0,0,82.39,84a2,2,0,0,0,.5-.47A46.88,46.88,0,0,0,97,50ZM50,7A43,43,0,0,1,81.88,78.82a35.54,35.54,0,0,0-22-18.17,20.28,20.28,0,1,0-19.8,0,35.52,35.52,0,0,0-22,18.18A42.59,42.59,0,0,1,7,50,43,43,0,0,1,50,7Zm0,52.25A16.28,16.28,0,1,1,66.28,43,16.29,16.29,0,0,1,50,59.25ZM21.12,81.84a31.73,31.73,0,0,1,57.76,0,42.93,42.93,0,0,1-57.76,0Z">
@@ -43,7 +291,7 @@
             <!-- icon shopping car -->
             <a href="#">
                 <span>
-                    <svg  style="width: 10%;" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                    <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
                         <g id="cart">
                             <path
                                 d="M47.55,73.94a8,8,0,1,0,8,8A8,8,0,0,0,47.55,73.94Zm0,12a4,4,0,1,1,4-4A4,4,0,0,1,47.55,85.91Z">
@@ -60,58 +308,124 @@
             </a>
         </div>
     </nav>
+
+    <!-- menu de navegacion mobile -->
+    <nav class="navegacion-mobile">
+        <input type="checkbox" id="chk-menu" class="hide" />
+        <label for="chk-menu" class="navegacion-mobile__burger-menu">
+            <img src="images/menu.png" />
+        </label>
+        <div class="navegacion-mobile__logo">
+            <img src="images/logo_header.png" alt="logo">
+        </div>
+            
+        <div class="navegacion-mobile__opciones">
+            <!-- icon user -->
+            <a href="#" >
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <g id="avatar">
+                            <path
+                                d="M97,50A47,47,0,1,0,17.28,83.74l0,0h0A46.93,46.93,0,0,0,82.39,84a2,2,0,0,0,.5-.47A46.88,46.88,0,0,0,97,50ZM50,7A43,43,0,0,1,81.88,78.82a35.54,35.54,0,0,0-22-18.17,20.28,20.28,0,1,0-19.8,0,35.52,35.52,0,0,0-22,18.18A42.59,42.59,0,0,1,7,50,43,43,0,0,1,50,7Zm0,52.25A16.28,16.28,0,1,1,66.28,43,16.29,16.29,0,0,1,50,59.25ZM21.12,81.84a31.73,31.73,0,0,1,57.76,0,42.93,42.93,0,0,1-57.76,0Z">
+                            </path>
+                        </g>
+                    </svg>
+                </span>
+            </a>
+            <!-- icon shopping car -->
+            <a href="#">
+                <span>
+                    <svg  xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100">
+                        <g id="cart">
+                            <path
+                                d="M47.55,73.94a8,8,0,1,0,8,8A8,8,0,0,0,47.55,73.94Zm0,12a4,4,0,1,1,4-4A4,4,0,0,1,47.55,85.91Z">
+                            </path>
+                            <path
+                                d="M76.82,73.94a8,8,0,1,0,8,8A8,8,0,0,0,76.82,73.94Zm0,12a4,4,0,1,1,4-4A4,4,0,0,1,76.82,85.91Z">
+                            </path>
+                            <path
+                                d="M88.75,61.75l8.09-36.12a6.46,6.46,0,0,0-6.3-7.87H27.47l-1.24-6.07a2,2,0,0,0-2-1.6H5a2,2,0,0,0,0,4H22.64l1.24,6.07h0l8.5,41.55h0L34.29,71a2,2,0,0,0,2,1.6H92.12a2,2,0,0,0,0-4H37.88l-1.09-5.31h50A2,2,0,0,0,88.75,61.75ZM36,59.31,28.29,21.76H90.54a2.45,2.45,0,0,1,2.4,3L85.19,59.31Z">
+                            </path>
+                        </g>
+                    </svg>
+                </span>
+            </a>
+        </div>
+
+        <div class="navegacion-mobile__menu menu">
+            <ul class=" navegacion-mobile__menu__lista">
+                <li class="menu__item">ELECTRIC SKATEBOARDS</li>
+                <li class="menu__item">ELECTRIC SCOOTERS</li>
+                <li class="menu__item">ACCESORIES</li>
+                <li class="menu__item">GIF CARD</li>
+                <li class="menu__item">MORE INFO</li>
+            </ul>
+            <label class="navegacion-mobile__menu__close" for="chk-menu">
+                <img width="20px" src="images/close.png" alt="">
+            </label>
+        </div>
+        
+    </nav>
+    
+
     <!-- header -->
-    <header>
-        <div>
-            <img src="images/header.jpg" alt="header">
-        </div>
-        <div>
-            <div>
-                <h2>Welcome to Boosted USA</h2>
+    <!-- <header class="presentacion">
+        <img class="presentacion__imagen" src="images/header.jpg" alt="header">
+        <div class="presentacion__informacion">
+            <div class="presentacion__descripcion">
+                <div>
+                    <h2 class="presentacion__titulo">Welcome to Boosted USA</h2>
+                </div>
+                <div>
+                    <p class="presentacion__parrafo">The Holy Grail of Electric Skateboards and One REVolutionary Scooter</p>
+                </div>
             </div>
-            <div>
-                <p>The Holy Grail of Electric Skateboards and One REVolutionary Scooter</p>
-            </div>
-        </div>
-        <div>
-            <div>
-                <a href="#">
+            <div class="presentacion__botones">
+                <a href="#" class="boton boton--redondo">
                     BOOSTED REVS
                 </a>
-            </div>
-            <div>
-                <a href="#">
+                <a href="#" class="boton boton--redondo">
                     BOOSTED BOARDS
                 </a>
             </div>
         </div>
-    </header>
-    <!-- brands -->
-    <section style="background-color: black;">
-        <div>
-            <div>
-                <img src="images/electreck.png" alt="electreck">
+        
+    </header> -->
+    <header class="presentacion">
+        <div class="presentacion__informacion">
+            <div class="presentacion__descripcion">
+                <div>
+                    <h2 class="presentacion__titulo">Welcome to Boosted USA</h2>
+                </div>
+                <div>
+                    <p class="presentacion__parrafo">The Holy Grail of Electric Skateboards and One REVolutionary Scooter</p>
+                </div>
             </div>
-            <div>
-                <img src="images/tech.png" alt="tech">
-            </div>
-            <div>
-                <img src="images/popular.png" alt="popular">
-            </div>
-            <div>
-                <img src="images/wired.png" alt="wired">
+            <div class="presentacion__botones">
+                <a href="#" class="boton boton--redondo">
+                    BOOSTED REVS
+                </a>
+                <a href="#" class="boton boton--redondo">
+                    BOOSTED BOARDS
+                </a>
             </div>
         </div>
+        
+    </header>
+
+
+    <!-- brands -->
+    <section class="marcas flex justify-space-evenly py-2">
+        <img src="images/electreck.png" alt="electreck">
+        <img src="images/tech.png" alt="tech">
+        <img src="images/popular.png" alt="popular">
+        <img src="images/wired.png" alt="wired">
     </section>
     <!-- locking text -->
-    <section>
-        <div>
-            <h2>Looking for  Boosted Boards, or Boosted Revs?</h2>
-        </div>
-        <div>
-            <p>Boosted USA acquired <b>all</b> of the remaining inventory directly from Boosted.  This means we have the electric skateboards and scooter you all love and have been looking for.  Get your hands on these <b>highly sought after</b> products while supplies last.</p>
-        </div>
-        <div></div>
+    <section class="texto-looking">
+        <h2 class="texto-looking__titulo">Looking for  Boosted Boards, or Boosted Revs?</h2>
+        <p class="texto-looking__parrafo">Boosted USA acquired <b>all</b> of the remaining inventory directly from Boosted.  This means we have the electric skateboards and scooter you all love and have been looking for.  Get your hands on these <b>highly sought after</b> products while supplies last.</p>
+        <div class="separador"></div>
     </section>
     <!-- images shop -->
     <section>

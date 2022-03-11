@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .cabeza {
+            width: 430px;
+            height: 430px;
+            background-color: #000000;
+            border-radius: 50%;
+            margin:  250px auto;
+            position: relative;
+        }
+        .orejas {
+            width: 700px;
+            position: absolute;
+            top: -140px;
+            left: -125px;
+        }
+        .oreja {
+            width: 240px;
+            height: 270px;
+            background-color: #000000;
+            border-radius: 50%;
+            display: inline-block;
+        }
+        #oreja-1 {
+            transform: rotateZ(30deg);
+        }
+        #oreja-2 {
+            float: right;
+            transform: rotateZ(-30deg);
+        }
+
+        .ojos {
+            width: 320px;
+            position: absolute;
+            left: 62px;
+            top: 19px;
+        }
+
+        .ojo {
+            width: 170px;
+            height: 250px;
+            background-color: #fefefe;
+            border-radius: 50%;
+            display: inline-block;
+            position: relative;
+            z-index: 1;
+        }
+
+        #ojo-1 {
+            transform: rotateZ(5deg);
+        }
+        #ojo-2 {
+            margin-left: -35px;
+            transform: rotateZ(-5deg);
+        }
+
+        .pupila {
+            width: 45px;
+            height: 135px;
+            border-radius: 50%;
+            background-color: #000000;
+            position: absolute;
+            bottom: 30px;
+        }
+
+        #pupila-1 {
+            right: 25px;
+            transform: rotateZ(-5deg);
+        }
+
+        
+        #pupila-2 {
+            left: 25px;
+            transform: rotateZ(5deg);
+        }
+
+        .boca {
+            width: 460px;
+            position: absolute;
+            bottom: 0;
+        }
+
+        .mejilla {
+            width: 260px;
+            height: 125px;
+            background-color: #fefefe;
+            border-radius: 50%;
+            display: inline-block;
+            border: 10px solid #000000;
+            position: absolute;
+            top: -173px;
+        }
+
+        #mejilla-1 {
+            transform: rotateZ(37deg);
+            left: -23px;
+        }
+
+        #mejilla-2 {
+            transform: rotateZ(-37deg);
+            right: 0px;
+        }
+
+        .nariz {
+            width: 200px;
+            height: 110px;
+            background-color: #fefefe;
+            position: absolute;
+            top: 234px;
+            border-radius: 50%;
+            left: calc(50% - 100px);
+            z-index: 2;
+            border-top: 8px solid #000000;
+        }
+
+        .nariz::after {
+            content: '';
+            width: 110px;
+            height: 70px;
+            background-color: #000000;
+            border-radius: 50%;
+            display: block;
+            margin: 15px auto;
+        }
+    </style>
+</head>
+<body>
+    <div class="cabeza">
+        <div class="orejas">
+            <div id="oreja-1" class="oreja"></div>
+            <div id="oreja-2" class="oreja"></div>
+        </div>
+        <div class="cara">
+            <div class="ojos">
+                <div id="ojo-1" class="ojo">
+                    <div id="pupila-1" class="pupila"></div>
+                </div>
+                <div id="ojo-2" class="ojo">
+                    <div id="pupila-2" class="pupila"></div>
+                </div>
+            </div>
+            <div class="nariz"></div>
+            <div class="boca">
+                <div class="mejilla" id="mejilla-1"></div>
+                <div class="mejilla" id="mejilla-2"></div>
+                <div class="labio-superior"></div>
+                <div class="lengua"></div>
+                <div class="labio-inferior"></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
